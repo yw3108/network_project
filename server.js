@@ -19,3 +19,11 @@ app.get('/pet', function(req, res){
 
 // 참고로 변경사항 자동으로 변경 >>  npm install -g nodemon
 
+//  /어쩌구로 접속 시 html 파일을 보내보자
+app.get('/', function(req, res){         //  / 하나는 홈이라는 뜻
+    res.sendfile(__dirname + '/index.html.')
+});  // /에 접속했을 때 /index.html을 여기에 보내
+
+app.get('/login', function(req, res){
+    res.sendfile(__dirname + '/login.html');
+});
